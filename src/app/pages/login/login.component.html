@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="form">
+        <form (ngSubmit)="login()">
+            <h3>Sign in</h3>
+
+            <div class="alert" *ngIf="error">
+                <span> 
+                    <img class="icon" src="../../assets/icons/icons8-box-important-50-white.png" />
+                    User email or password incorrect.
+                 </span>
+            </div>
+
+            <div class="group">
+                <label for="user" class="label">Email</label>
+                <input type="text" class="input" name="user" [(ngModel)]="email" required #mail="ngModel">
+
+                <div *ngIf="mail.invalid && (mail.dirty || mail.touched)" class="error-message">
+                    <span *ngIf="mail.errors?.required">
+                        <img class="icon" src="../../assets/icons/icons8-box-important-50-red.png" />
+                        Email is required.
+                    </span>
+                </div>
+            </div>
+
+            <div class="group">
+                <label for="pass" class="label">Password</label>
+                <input type="password" class="input" data-type="password" name="password" [(ngModel)]="password"
+                    required #secretWord="ngModel">
+
+                <div *ngIf="secretWord.invalid && (secretWord.dirty || secretWord.touched)" class="error-message">
+                    <span *ngIf="secretWord.errors?.required">
+                        <img class="icon" src="../../assets/icons/icons8-box-important-50-red.png" />
+                        Password is required.
+                    </span>
+                </div>
+            </div>
+
+
+            <div class="group">
+                <input type="submit" class="button" value="Sign In">
+            </div>
+
+            <div class="group">
+                <p class="txt-normal">Don't have an account? <a [routerLink]="['/register']">Sign up</a></p>
+            </div>
+        </form>
+    </div>
+</div>

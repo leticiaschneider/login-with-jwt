@@ -1,0 +1,38 @@
+.container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #d3c6dc;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.alert {
+    background-color: #dc3939;
+    border-radius: 2px;
+
+    margin: 20px 0;
+    padding: 10px 20px;
+
+    .icon {
+        width: 15px;
+        margin-right: 10px;
+    }
+
+    span {
+        display: flex;
+        color: white;
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .form {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 20px;
+        border: 7px solid #d3c6dc47;
+    }
+}

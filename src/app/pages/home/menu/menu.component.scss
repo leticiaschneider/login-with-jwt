@@ -1,0 +1,24 @@
+nav a {
+    color: #212121;
+    display: block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+nav a:hover {
+    color: #5e5e5e;
+}
+
+nav ul,
+nav ul li {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+}
+
+nav > ul {
+    background: #d3c6dc;
+    text-align: center;
+}

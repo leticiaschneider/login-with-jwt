@@ -1,0 +1,69 @@
+<div class="container">
+    <div class="box">
+        <div class="row ">
+            <div class="apresentation">
+                <img class="image cloud x1" src="../assets/images/cloud1.png" />
+                <img class="image cloud x2" src="../assets/images/cloud2.png" />
+                <img class="image cloud x3" src="../assets/images/cloud3.png" />
+            </div>
+
+            <div class="form">
+                <form (ngSubmit)="register()">
+                    <h3>Sign up</h3>
+
+                    <div class="group">
+                        <label for="user" class="label">Full Name</label>
+                        <input id="user" type="text" class="input" name="fullName" [(ngModel)]="user.fullName" required
+                            minlength="4" #fullName="ngModel">
+
+                        <div *ngIf="fullName.invalid && (fullName.dirty || fullName.touched)" class="error-message">
+                            <span *ngIf="fullName.errors?.required">
+                                <img class="icon" src="../../../assets/icons/icons8-box-important-50-red.png" />
+                                Name is required.
+                            </span>
+
+                            <span *ngIf="fullName.errors?.minlength">
+                                Name must be at least 4 characters long.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label for="user" class="label">Email</label>
+                        <input id="user" type="text" class="input" name="email" [(ngModel)]="user.email" required
+                            #mail="ngModel">
+
+                        <div *ngIf="mail.invalid && (mail.dirty || mail.touched)" class="error-message">
+                            <span *ngIf="mail.errors?.required">
+                                <img class="icon" src="../../assets/icons/icons8-box-important-50-red.png" />
+                                Email is required.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <label for="pass" class="label">Password</label>
+                        <input id="pass" type="password" class="input" data-type="password" name="password"
+                            [(ngModel)]="user.password" required #secretWord="ngModel">
+
+                        <div *ngIf="secretWord.invalid && (secretWord.dirty || secretWord.touched)"
+                            class="error-message">
+                            <span *ngIf="secretWord.errors?.required">
+                                <img class="icon" src="../../assets/icons/icons8-box-important-50-red.png" />
+                                Password is required.
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="group">
+                        <input type="submit" class="button" value="Sign Up">
+                    </div>
+
+                    <div class="group">
+                        <p class="txt-normal">Already a member? <a [routerLink]="['/login']">Login</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

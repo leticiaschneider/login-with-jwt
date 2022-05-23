@@ -1,0 +1,116 @@
+.container {
+    background-color: #d3c6dc;
+    width: 100vw;
+
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .row {
+        .apresentation {
+            background: url("../../../assets/images/background.jpg") no-repeat;
+            overflow-x: hidden;
+            background-size: cover;
+            position: relative; 
+
+            .cloud {
+                position: absolute;
+                box-shadow: thistle;
+            }
+
+            .x1 {
+                animation: cloud-animation infinite 50s linear;
+                animation-delay: 0.9s;
+            }
+
+            .x2 {
+                animation: cloud-animation infinite 65s linear;
+                animation-delay: 0.5s;
+            }
+
+            .x3 {
+                animation: cloud-animation infinite 75s linear;
+                animation-delay: 0.2s;
+            }
+        }
+
+        .form {
+            background-color: #fff;
+            padding: 50px;
+        }
+    }
+}
+
+@keyframes cloud-animation {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(calc(100vw - 75%));
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: 100vh;
+
+        .form {
+            border-radius: 20px;
+            margin: 20px auto;
+        }
+        .apresentation {
+            display: none;
+        }
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .row {
+        box-shadow: 3px 4px 10px #888888;
+        border-radius: 20px;
+        margin: 50px auto;
+
+        .form {
+            border-radius: 0px 0px 20px 20px;
+        }
+        .apresentation {
+            width: 445px;
+            border-radius: 20px 20px 0px 0px;
+        }
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .box {
+        padding: 50px;
+    }
+
+    .container {
+        height: 100vh;
+
+        .row {
+            box-shadow: 3px 4px 10px #888888;
+            border-radius: 20px;
+            display: flex;
+            max-width: 900px;
+
+            .form {
+                border-radius: 0px 20px 20px 0px;
+            }
+            .apresentation {
+                width: 600px;
+                border-radius: 20px 0px 0px 20px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .row {
+        .apresentation {
+            width: 400px;
+        }
+    }
+}

@@ -1,0 +1,79 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap");
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Libre Baskerville", serif;
+}
+
+.form {
+    background-color: #fff;
+    padding: 50px;
+
+    .group {
+        margin-bottom: 15px;
+
+        .label,
+        .txt-normal,
+        a {
+            width: 100%;
+            font-size: 12px;
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            height: 25px;
+            width: 90%;
+            border-radius: 7px;
+            outline: none;
+            border: 1px solid rgba(43, 43, 43, 0.688);
+        }
+
+        input[type="submit"] {
+            text-transform: uppercase;
+            color: #fff;
+            font-weight: 600;
+            height: 35px;
+            width: 97%;
+            border-radius: 7px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            box-shadow: 3px 4px 10px #888888;
+            background: linear-gradient(363deg, #6a69b5 2%, #dda7cd 107%);
+            margin-top: 30px;
+
+            &:hover {
+                background: linear-gradient(363deg, #4f4dab 2%, #b05e98 107%);
+            }
+        }
+
+        .error-message {
+            margin-top: 5px;
+
+            .icon {
+                width: 15px;
+                margin-right: 5px;
+            }
+            span {
+                display: flex;
+                color: #dc3939;
+                font-size: 11px;
+            }
+        }
+
+        a {
+            color: #be8dc4;
+        }
+
+        a:visited {
+            color: #5d4e96;
+        }
+    }
+}
+
+.mr-20 {
+    margin-right: 20px;
+}
